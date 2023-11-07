@@ -1,0 +1,85 @@
+#h1{
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    background-color: lightgreen;
+} 
+
+#h2{
+    height: 30px;
+    line-height: 30px;
+    background-color: lightskyblue;
+}
+
+img{
+    width: 50%;
+}
+
+
+#pokemon-battle{
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+.box1{
+    background: lightcoral;
+    width: 100%;
+    text-align: center;
+    margin-right: 5px;
+  }
+   
+.box2{
+    background: lightgreen;
+    width: 100%;
+    text-align: center;
+    margin-left: 5px;
+}
+
+  
+.box3{
+    border: 2px solid red;
+    width: 100%;
+    /* height: 600px; */
+    text-align: center;
+    margin-right: 5px;
+}
+
+.box4{
+    border: 2px solid green;
+    width: 100%;
+    /* height: 600px; */
+    text-align: center;
+    margin-left: 5px;
+}
+
+
+.flexbox{
+display: flex;
+}
+
+
+#pokemonAstatus{
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#pokemonBstatus{
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+#battle{
+    border: 2px solid black;
+    background-color: azure;
+    width: 100%;
+    text-align: left;
+    margin-right: 5px;
+}
+
+#battlebutton{
+    text-align: center;
+}
