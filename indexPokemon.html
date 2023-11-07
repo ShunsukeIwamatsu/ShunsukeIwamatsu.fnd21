@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Pokemon</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <script type="text/javascript" src="allPokemon.js"></script>
+  <style>
+    body {
+      font-family: monospace;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flexbox">
+ 
+    <div class="box1">
+     <h2>自分のポケモン</h2>
+    </div>
+     
+    <div class="box2">
+     <h2>相手のポケモン</h2>
+    </div>
+  </div>
+    
+  <div>
+    <p></p>
+  </div>
+  
+  
+  <div class="flexbox">
+ 
+    <div class="box3">
+      <p id="pokemonA"> <input type="button" value="自分のポケモンを選ぼう！" onclick="disabled = true;"></p>
+      <div id="pokemonAstatus">
+        
+      </div>
+    </div>
+     
+    <div class="box4">
+      <p id="pokemonB"> <input type="button" value="相手のポケモンを選ぼう！" onclick="disabled = true;"></p>
+      <div id="pokemonBstatus">
+        
+      </div>
+    </div>
+     
+  </div>
+
+  <p></p>
+  <div class="flexbox">
+    <div id="battle">
+      <p id="battlebutton"> <input type="button" value="バトルを進める"></p>
+      <div id="battleStatus">
+        <p></p>
+      </div>
+    
+    </div>
+  </div>
+  
+  </div>
+  
+
+
+ 
+  <link rel = "stylesheet" href="presentaion.css">
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
