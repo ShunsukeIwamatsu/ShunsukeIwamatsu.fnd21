@@ -1,6 +1,7 @@
 'use strict'
 // Please don't delete the 'use strict' line above
 
+
 //【パート】前提条件
 //html上の要素を取得する
 const pokemonBattle = document.getElementById("pokemon-battle");
@@ -115,9 +116,9 @@ function makeBattleAtoB(selectedPokemonA, selectedPokemonB){
   hpB = hpB - damageA;
 
   if(hpB > 0){
-    return `【 ${nameA} の攻撃】${attackA}： ${nameB}に${damageA}ダメージ　 => 　${nameB}のHP：${hpB}`;
+    return `<font color="red">【 ${nameA} の攻撃】 </font>${attackA}： ${nameB}に${damageA}ダメージ　 => 　${nameB}のHP：${hpB}`;
   }else{
-    return `【 ${nameA} の攻撃】${attackA}： ${nameB}に${damageA}ダメージ　 => 　${nameB}のHP：0
+    return `<font color="red">【 ${nameA} の攻撃】 </font>${attackA}： ${nameB}に${damageA}ダメージ　 => 　${nameB}のHP：0
     <font color="red"> => ${nameA} の勝利！ </font>`;
   }
 }
@@ -134,9 +135,9 @@ function makeBattleBtoA(selectedPokemonA, selectedPokemonB){
   hpA = hpA - damageB;
 
   if(hpA > 0){
-    return `【 ${nameB} の攻撃】${attackB}： ${nameA}に${damageB}ダメージ　 => 　${nameA}のHP：${hpA}`;
+    return `<font color="green">【 ${nameB} の攻撃】</font>${attackB}： ${nameA}に${damageB}ダメージ　 => 　${nameA}のHP：${hpA}`;
   }else{
-    return `【 ${nameB} の攻撃】${attackB}： ${nameA}に${damageB}ダメージ　 => 　${nameA}のHP：0
+    return `<font color="green">【 ${nameB} の攻撃】</font>${attackB}： ${nameA}に${damageB}ダメージ　 => 　${nameA}のHP：0
     <font color="green">　=> ${nameB} の勝利！ </font>`;
   }
   
