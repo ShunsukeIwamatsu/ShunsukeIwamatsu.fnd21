@@ -1,27 +1,6 @@
 'use strict'
 // Please don't delete the 'use strict' line above
 
-let actual;
-let expected;
-
-function test(actual, expected) {
-    if (JSON.stringify(actual) === JSON.stringify(expected)) {
-      console.log("OK! Test PASSED.");
-    } else {
-      console.error("Test FAILED. Try again!");
-      console.log("    actual: ", actual);
-      console.log("  expected: ", expected);
-      console.trace();
-    }
-  }
-
-// console.log(allPokemon);
-// console.log(allPokemon.length);
-// console.log(allPokemon[0]);
-
-
-
-
 //【パート】前提条件
 //html上の要素を取得する
 const pokemonBattle = document.getElementById("pokemon-battle");
@@ -131,11 +110,16 @@ function makeBattleAtoB(selectedPokemonA, selectedPokemonB){
 
   const num = Math.floor( Math.random() * selectedPokemonA["Special Attack(s)"].length ) ;
   const attackA = selectedPokemonA["Special Attack(s)"][num]["Name"];
-  const damageA = selectedPokemonA["Special Attack(s)"][num]["Damage"];
+  const damageA = 5*selectedPokemonA["Special Attack(s)"][num]["Damage"];
 
   hpB = hpB - damageA;
 
-  return `【 ${nameA} の攻撃】${attackA}： ${nameB}に${damageA}ダメージ　 => 　${nameB}のHP：${hpB}`;
+  if(hpB > 0){
+    return `【 ${nameA} の攻撃】${attackA}： ${nameB}に${damageA}ダメージ　 => 　${nameB}のHP：${hpB}`;
+  }else{
+    return `【 ${nameA} の攻撃】${attackA}： ${nameB}に${damageA}ダメージ　 => 　${nameB}のHP：0
+    <font color="red"> => ${nameA} の勝利！ </font>`;
+  }
 }
 
 // ポケモンB → Aに攻撃する関数
@@ -145,11 +129,17 @@ function makeBattleBtoA(selectedPokemonA, selectedPokemonB){
 
   const num = Math.floor( Math.random() * selectedPokemonB["Special Attack(s)"].length ) ;
   const attackB = selectedPokemonA["Special Attack(s)"][num]["Name"];
-  const damageB = selectedPokemonA["Special Attack(s)"][num]["Damage"];
+  const damageB = 5*selectedPokemonA["Special Attack(s)"][num]["Damage"];
 
   hpA = hpA - damageB;
 
-  return `【 ${nameB} の攻撃】${attackB}： ${nameA}に${damageB}ダメージ　 => 　${nameA}のHP：${hpA}`;
+  if(hpA > 0){
+    return `【 ${nameB} の攻撃】${attackB}： ${nameA}に${damageB}ダメージ　 => 　${nameA}のHP：${hpA}`;
+  }else{
+    return `【 ${nameB} の攻撃】${attackB}： ${nameA}に${damageB}ダメージ　 => 　${nameA}のHP：0
+    <font color="green">　=> ${nameB} の勝利！ </font>`;
+  }
+  
 }
 
 // マウスクリックイベントと組み合わせる関数
