@@ -6,13 +6,17 @@
 } 
 
 #h2{
-    height: 30px;
-    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
     background-color: lightskyblue;
 }
 
 img{
     width: 50%;
+}
+
+#img-vdn{
+    width: 100%;
 }
 
 
